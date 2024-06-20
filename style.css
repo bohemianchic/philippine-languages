@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1F3B4D;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+h1 {
+    margin-bottom: 20px;
+}
+#translateForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px; /* Adjusted max width */
+}
+.lang-selectors {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+select, textarea, button {
+    padding: 10px;
+    margin: 5px;
+    width: 100%;
+}
+textarea#text {
+    min-height: 100px; /* Adjust height for better multi-line input */
+    resize: vertical; /* Allow vertical resizing only */
+    width: 95%; /* Adjusted width for text area */
+}
+button#swapLangs {
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+button[type="submit"] {
+    width: 200px; /* Set specific width for translate button */
+}
+#result {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #FFFFFF;
+    width: 30%; 
+    text-align: center;
+}
+footer {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+a {
+    color: #79B4D5;
+}

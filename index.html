@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regional Philippine Languages Translator</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    <h1>Regional Philippine Languages Translator</h1>
+    <form action="/translate" method="post" id="translateForm">
+        <div class="lang-selectors">
+            <div>
+                <label for="src_lang">From:</label>
+                <select name="src_lang" id="src_lang">
+                    <option value="tgl">Tagalog</option>
+                    <option value="ilo">Ilocano</option>
+                    <option value="pag">Pangasinan</option>
+                    <option value="war">Waray</option>
+                    <option value="eng">English</option>
+                    <option value="ceb">Cebuano</option>
+                </select>
+            </div>
+            <button type="button" id="swapLangs" title="Swap Languages">&#8646;</button>
+            <div>
+                <label for="tgt_lang">To:</label>
+                <select name="tgt_lang" id="tgt_lang">
+                    <option value="tgl">Tagalog</option>
+                    <option value="ilo">Ilocano</option>
+                    <option value="pag">Pangasinan</option>
+                    <option value="war">Waray</option>
+                    <option value="eng">English</option>
+                    <option value="ceb">Cebuano</option>
+                </select>
+            </div>
+        </div>
+        <textarea name="text" id="text" placeholder="Enter text here..." oninput="limitWords(this)"></textarea>
+        <button type="submit">Translate</button>
+    </form>
+    <div id="result"></div>
+    <footer>
+        Built by <a href="https://www.linkedin.com/in/jeandinco/" target="_blank">Jean Linis Dinco</a>
+        using <a href="https://github.com/facebookresearch/fairseq/tree/nllb" target="_blank">No Languages Left Behind by Meta AI</a>
+    </footer>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>
